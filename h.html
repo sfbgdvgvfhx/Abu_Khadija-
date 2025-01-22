@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-title">خادمك المطيع</div>
+            <p class="app-subtitle">اسألني او اطلب اي شئ</p>
+        </header>
+
+        <div class="chat-container" id="chatContainer"></div>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="userInput" 
+                    placeholder="اكتب هنا ما تريد..."
+                    rows="1"
+                ></textarea>
+            </div>
+            <div class="action-buttons">
+                <button onclick="sendMessage()" id="sendButton">أرسال</button>
+                <button onclick="clearChat()" class="clear-btn">مسح</button>
+                <button onclick="uploadFile()" class="upload-btn">رفع ملف</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
